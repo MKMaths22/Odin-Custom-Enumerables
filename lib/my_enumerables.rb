@@ -40,6 +40,12 @@ module Enumerable
     output
   end
 
+  def my_map
+    output_array = []
+    my_each { |item| output_array.push(yield item) }
+    output_array
+  end
+
 end
 
 # You will first have to define my_each
