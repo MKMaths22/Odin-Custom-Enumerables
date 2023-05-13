@@ -21,6 +21,12 @@ module Enumerable
     output
   end
 
+  def my_any?
+    output = false
+    my_each { |item| output = true if yield item }
+    output
+  end 
+
 
 end
 
