@@ -33,6 +33,12 @@ module Enumerable
     output
   end
 
+  def my_count
+    return self.size unless block_given?
+    output = 0
+    my_each { |item| output += 1 if yield item }
+    output
+  end
 
 end
 
