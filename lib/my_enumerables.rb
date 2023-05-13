@@ -46,6 +46,12 @@ module Enumerable
     output_array
   end
 
+  def my_inject(value = self[0])
+    output = value
+    my_each { |item| output = yield output, item }
+    output
+  end
+
 end
 
 # You will first have to define my_each
