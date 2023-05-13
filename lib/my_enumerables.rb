@@ -9,7 +9,13 @@ module Enumerable
     self
   end
 
-  
+  def my_select
+    output_array = []
+    my_each { |item| output_array.push(item) if yield item }
+    output_array
+  end
+
+
 end
 
 # You will first have to define my_each
